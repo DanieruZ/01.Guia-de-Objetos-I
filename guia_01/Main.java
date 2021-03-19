@@ -79,6 +79,9 @@ public class Main {
                     show.println("  -------------------");
                     show.println("\n");
 
+                    ItemVenta itemVenta = new ItemVenta(1, "Remeras talle XL", 87, 120.50);
+                    show.println(itemVenta.mostrarItemVenta());
+
                     Pausa.pausar();
                     limpiarPantalla();
                     break;
@@ -94,24 +97,6 @@ public class Main {
                 case 5:
                     show.println("  -------------------");
                     show.println(" |   Ejercicio 05.   |");
-                    show.println("  -------------------");
-                    show.println("\n");
-
-                    Pausa.pausar();
-                    limpiarPantalla();
-                    break;
-                case 6:
-                    show.println("  -------------------");
-                    show.println(" |   Ejercicio 06.   |");
-                    show.println("  -------------------");
-                    show.println("\n");
-
-                    Pausa.pausar();
-                    limpiarPantalla();
-                    break;
-                case 7:
-                    show.println("  -------------------");
-                    show.println(" |   Ejercicio 07.   |");
                     show.println("  -------------------");
                     show.println("\n");
 
@@ -148,8 +133,6 @@ public class Main {
         show.println("\t   [3].Ejercicio 03.");
         show.println("\t   [4].Ejercicio 04.");
         show.println("\t   [5].Ejercicio 05.");
-        show.println("\t   [6].Ejercicio 06.");
-        show.println("\t   [7].Ejercicio 07.");
         show.println("\n\t____________________________________________________________________");
         show.println("\n");
         show.println("\t   [0].Salir del programa.");
