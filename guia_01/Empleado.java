@@ -82,8 +82,7 @@ public class Empleado {
     }
 
     public String mostrarEmpleado() {
-        return
-                "\ndni:......." + this.dni +
+        return  "\ndni:......." + this.dni +
                 "\nNombre:...." + this.nombre +
                 "\nApellido:.." + this.apellido +
                 "\nSalario:..." + this.salario;

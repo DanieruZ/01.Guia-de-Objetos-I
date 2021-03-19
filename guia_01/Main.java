@@ -91,6 +91,18 @@ public class Main {
                     show.println("  -------------------");
                     show.println("\n");
 
+                    Cuenta cuenta = new Cuenta(1, "Pepe Argento", 1500);
+
+                    show.println("\nEl balance actual es: $" + cuenta.getBalance());
+
+                    show.println("\nSe efectuo un deposito por $2500, balance actual: $" + cuenta.credito(2500));
+
+                    show.println("\nSe efectuo una compra por $1500, el balance actual es: $" + cuenta.debito(1500));
+
+                    show.println("\nSe intento efectuar una compra por $30000, el balance actual es: $" + cuenta.debito(30000));
+
+                    show.println(cuenta.mostrarCuenta());
+
                     Pausa.pausar();
                     limpiarPantalla();
                     break;
