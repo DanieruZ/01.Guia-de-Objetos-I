@@ -122,7 +122,7 @@ public class Main {
 
                     show.println("\n-------------------------------------------");
 
-                    Hora tiempo2 = new Hora(0, 0, 0);
+                    Hora tiempo2 = new Hora(13, 4, 0);
 
                     show.println("\nLa hora actual es: " + tiempo2.horaActual());
 

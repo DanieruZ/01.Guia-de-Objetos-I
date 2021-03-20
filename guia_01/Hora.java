@@ -31,31 +31,55 @@ public class Hora {
     }
 
     public void avanzarHora() {
-        this.hora = (this.hora == 23) ? 0 : this.hora + 1;
+        if (this.hora == 23) {
+            this.hora = 0;
+        } else {
+            this.hora++;
+        }
     }
 
     public void avanzarMinuto() {
-        this.minuto = (this.minuto == 59) ? 0 : this.segundo++;
-        avanzarHora();
+        if(this.minuto == 59) {
+            this.minuto = 0;
+            avanzarHora();
+        }else {
+            this.minuto++;
+        }
     }
 
     public void avanzarSegundo() {
-        this.segundo = (this.segundo == 59) ? 0 : this.segundo++;
-        avanzarMinuto();
+        if(this.segundo == 59) {
+            this.segundo = 0;
+            avanzarMinuto();
+        }else {
+            this.segundo++;
+        }
     }
 
     public void retrocederHora() {
-        this.hora = (this.hora == 0) ? 23 : this.hora--;
+        if (this.hora == 0) {
+            this.hora = 23;
+        } else {
+            this.hora--;
+        }
     }
 
     public void retrocederMinuto() {
-        this.minuto = (this.minuto == 0) ? 59 : this.minuto--;
-        retrocederHora();
+        if(this.minuto == 0) {
+            this.minuto = 59;
+            retrocederHora();
+        }else {
+            this.minuto--;
+        }
     }
 
     public void retrocederSegundo() {
-        this.segundo = (this.segundo == 0) ? 59 : this.segundo--;
-        retrocederMinuto();
+        if(this.segundo == 0) {
+            this.segundo = 59;
+            retrocederMinuto();
+        }else {
+            this.segundo--;
+        }
     }
 
     public String horaActual() {
