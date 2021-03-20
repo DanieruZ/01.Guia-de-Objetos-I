@@ -112,7 +112,7 @@ public class Main {
                     show.println("  -------------------");
                     show.println("\n");
 
-                    Hora tiempo = new Hora(13, 04, 59);
+                    Hora tiempo = new Hora(13, 4, 59);
 
                     show.println("\nLa hora actual es: " + tiempo.horaActual());
 
@@ -122,7 +122,7 @@ public class Main {
 
                     show.println("\n-------------------------------------------");
 
-                    Hora tiempo2 = new Hora(00, 00, 00);
+                    Hora tiempo2 = new Hora(0, 0, 0);
 
                     show.println("\nLa hora actual es: " + tiempo2.horaActual());
 
