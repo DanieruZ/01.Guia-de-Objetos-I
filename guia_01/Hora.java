@@ -1,8 +1,5 @@
 package guia_01;
 
-import java.io.PrintStream;
-import java.util.Scanner;
-
 /****************************************************************
  *
  * 5. Modele el objeto Hora, teniendo en cuenta sus atributos, hora, minuto y segundo.
@@ -21,14 +18,11 @@ import java.util.Scanner;
 
 public class Hora {
 
-    public static PrintStream show = System.out;
-    public static Scanner scan = new Scanner(System.in);
-
     private int hora;
     private int minuto;
     private int segundo;
 
-    public Hora() { }
+    //public Hora() { }
 
     public Hora(int hora, int minuto, int segundo) {
         this.hora = (hora > (-1) && hora < 24) ? hora : 0;
@@ -37,55 +31,31 @@ public class Hora {
     }
 
     public void avanzarHora() {
-        if (this.hora == 23) {
-            this.hora = 0;
-        } else {
-            this.hora++;
-        }
+        this.hora = (this.hora == 23) ? 0 : this.hora + 1;
     }
 
     public void avanzarMinuto() {
-        if(this.minuto == 59) {
-            this.minuto = 0;
-            avanzarHora();
-        }else {
-            this.minuto++;
-        }
+        this.minuto = (this.minuto == 59) ? 0 : this.segundo++;
+        avanzarHora();
     }
 
     public void avanzarSegundo() {
-        if(this.segundo == 59) {
-            this.segundo = 0;
-            avanzarMinuto();
-        }else {
-            this.segundo++;
-        }
+        this.segundo = (this.segundo == 59) ? 0 : this.segundo++;
+        avanzarMinuto();
     }
 
     public void retrocederHora() {
-        if (this.hora == 0) {
-            this.hora = 23;
-        } else {
-            this.hora--;
-        }
+        this.hora = (this.hora == 0) ? 23 : this.hora--;
     }
 
     public void retrocederMinuto() {
-        if(this.minuto == 0) {
-            this.minuto = 59;
-            retrocederHora();
-        }else {
-            this.minuto--;
-        }
+        this.minuto = (this.minuto == 0) ? 59 : this.minuto--;
+        retrocederHora();
     }
 
     public void retrocederSegundo() {
-        if(this.segundo == 0) {
-            this.segundo = 59;
-            retrocederMinuto();
-        }else {
-            this.segundo--;
-        }
+        this.segundo = (this.segundo == 0) ? 59 : this.segundo--;
+        retrocederMinuto();
     }
 
     public String horaActual() {
@@ -94,5 +64,4 @@ public class Hora {
         String s = String.format("%02d", segundo);
         return h + ":" + m + ":" + s;
     }
-
 }
