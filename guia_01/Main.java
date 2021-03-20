@@ -91,7 +91,7 @@ public class Main {
                     show.println("  -------------------");
                     show.println("\n");
 
-                    Cuenta cuenta = new Cuenta(1, "Pepe Argento", 1500);
+                    Cuenta cuenta = new Cuenta(1, "Pepe Argento", 15000);
 
                     show.println("\nEl balance actual es: $" + cuenta.getBalance());
 
@@ -111,6 +111,24 @@ public class Main {
                     show.println(" |   Ejercicio 05.   |");
                     show.println("  -------------------");
                     show.println("\n");
+
+                    Hora tiempo = new Hora(13, 04, 59);
+
+                    show.println("\nLa hora actual es: " + tiempo.horaActual());
+
+                    show.println("\nSe adelanta un segundo el tiempo.");
+                    tiempo.avanzarSegundo();
+                    show.println("\nLa hora actual es: " + tiempo.horaActual());
+
+                    show.println("\n-------------------------------------------");
+
+                    Hora tiempo2 = new Hora(00, 00, 00);
+
+                    show.println("\nLa hora actual es: " + tiempo2.horaActual());
+
+                    show.println("\nSe retrasa un segundo el tiempo.");
+                    tiempo2.retrocederSegundo();
+                    show.println("\nLa hora actual es: " + tiempo2.horaActual());
 
                     Pausa.pausar();
                     limpiarPantalla();
